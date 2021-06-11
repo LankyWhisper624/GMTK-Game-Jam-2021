@@ -1,0 +1,59 @@
+[gd_scene load_steps=11 format=2]
+
+[sub_resource type="PhysicsMaterial" id=3]
+
+[sub_resource type="BoxShape" id=1]
+
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="SpatialMaterial" id=5]
+
+[sub_resource type="PhysicsMaterial" id=8]
+
+[sub_resource type="BoxShape" id=2]
+
+[sub_resource type="CubeMesh" id=6]
+
+[sub_resource type="ShaderMaterial" id=7]
+
+[sub_resource type="SpatialMaterial" id=10]
+
+[sub_resource type="BoxShape" id=9]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="StaticBody" type="StaticBody" parent="."]
+physics_material_override = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="StaticBody"]
+mesh = SubResource( 4 )
+material = SubResource( 5 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 30.074, 0 )
+physics_material_override = SubResource( 8 )
+
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.430323, -0.616135, 0.469278 )
+shape = SubResource( 2 )
+
+[node name="CSGMesh" type="CSGMesh" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.430323, -0.616135, 0.469278 )
+mesh = SubResource( 6 )
+material = SubResource( 7 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.651423, 0, 0.758714, 0, 1, 0, -0.758714, 0, -0.651423, 6.74572, 2.6113, -5.43327 )
+
+[node name="StaticBody2" type="StaticBody" parent="."]
+
+[node name="CSGBox" type="CSGBox" parent="StaticBody2"]
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -0.413124, -2.26694, 0 )
+material = SubResource( 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
+transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -0.413124, -2.26694, 0 )
+shape = SubResource( 9 )
