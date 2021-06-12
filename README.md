@@ -1,5 +1,5 @@
 # GMTK Game Jam 2021
- Repository for the GMTK Game Jam 2021.
+ Repository for the GMTK Game Jam 2021.  
  This game is currently a WIP. It also does not have a title yet.
  
 # Copyright
