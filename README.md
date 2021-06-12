@@ -4,7 +4,7 @@
  
 # Copyright
 
-    Copyright (C) 2021 LankyWhisper624 (Jacob Merrill), AelarAmakiir (Joshua Merrill), DarkRaGaming (Julian Vento)
+    Copyright (C) 2021 Jacob Merrill (LankyWhisper624), Joshua Merrill (AelarAmakiir), Julian Vento (DarkRaGaming)
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
