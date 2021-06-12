@@ -1,10 +1,10 @@
 # GMTK Game Jam 2021
- Repository for the GMTK Game Jam 2021.
+ Repository for the GMTK Game Jam 2021.  
  This game is currently a WIP. It also does not have a title yet.
  
 # Copyright
 
-    Copyright (C) 2021 LankyWhisper624
+    Copyright (C) 2021 Jacob Merrill (LankyWhisper624), Joshua Merrill (AelarAmakiir), Julian Vento (DarkRaGaming)
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
