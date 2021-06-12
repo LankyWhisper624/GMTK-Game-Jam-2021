@@ -4,50 +4,50 @@
 [ext_resource path="res://player.gd" type="Script" id=2]
 [ext_resource path="res://Camera.gd" type="Script" id=3]
 
-[sub_resource type="PhysicsMaterial" id=3]
-
-[sub_resource type="BoxShape" id=1]
-
-[sub_resource type="CubeMesh" id=4]
-
-[sub_resource type="SpatialMaterial" id=5]
-
-[sub_resource type="PhysicsMaterial" id=8]
+[sub_resource type="PhysicsMaterial" id=1]
 
 [sub_resource type="BoxShape" id=2]
 
-[sub_resource type="CubeMesh" id=6]
+[sub_resource type="CubeMesh" id=3]
 
-[sub_resource type="ShaderMaterial" id=7]
+[sub_resource type="SpatialMaterial" id=4]
 
-[sub_resource type="SpatialMaterial" id=10]
+[sub_resource type="PhysicsMaterial" id=5]
 
-[sub_resource type="BoxShape" id=9]
+[sub_resource type="BoxShape" id=6]
+
+[sub_resource type="CubeMesh" id=7]
+
+[sub_resource type="ShaderMaterial" id=8]
+
+[sub_resource type="SpatialMaterial" id=9]
+
+[sub_resource type="BoxShape" id=10]
 
 [node name="Spatial" type="Spatial"]
 
 [node name="StaticBody" type="StaticBody" parent="."]
-physics_material_override = SubResource( 3 )
+physics_material_override = SubResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="CSGMesh" type="CSGMesh" parent="StaticBody"]
-mesh = SubResource( 4 )
-material = SubResource( 5 )
+mesh = SubResource( 3 )
+material = SubResource( 4 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9, 30.074, 0 )
-physics_material_override = SubResource( 8 )
+physics_material_override = SubResource( 5 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.430323, -0.616135, 0.469278 )
-shape = SubResource( 2 )
+shape = SubResource( 6 )
 
 [node name="CSGMesh" type="CSGMesh" parent="RigidBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.430323, -0.616135, 0.469278 )
-mesh = SubResource( 6 )
-material = SubResource( 7 )
+mesh = SubResource( 7 )
+material = SubResource( 8 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.772545, -0.365376, 0.519302, 0.0132902, 0.808366, 0.588531, -0.634821, 0.461568, -0.619643, 9.76665, 11.1825, -9.68012 )
@@ -57,11 +57,13 @@ script = ExtResource( 3 )
 
 [node name="CSGBox" type="CSGBox" parent="StaticBody2"]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -0.413124, -2.26694, 0 )
-material = SubResource( 10 )
+material = SubResource( 9 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody2"]
 transform = Transform( 10, 0, 0, 0, 1, 0, 0, 0, 10, -0.413124, -2.26694, 0 )
-shape = SubResource( 9 )
+shape = SubResource( 10 )
 
 [node name="Spatial" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.19306, 1.09737, 2.2508 )
 script = ExtResource( 2 )
+PlayerScene = ExtResource( 1 )
